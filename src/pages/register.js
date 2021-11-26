@@ -6,7 +6,7 @@ class RegisterPage extends Component{
     return(
       <div>
         <h1 className="heading">This is a registration page</h1>
-        
+
       </div>
     )
   }
