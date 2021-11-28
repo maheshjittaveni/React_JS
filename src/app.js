@@ -14,8 +14,8 @@ class Application extends Component{
     return(
       <BrowserRouter>
       <Switch>
-        <Route path="/about-us" component={AboutUsPage}></Route>
-        <Route path="/contact" component={ContactUsPage}></Route>
+        <Route path="/aboutus" component={AboutUsPage}></Route>
+        <Route path="/contactus" component={ContactUsPage}></Route>
         <Route path="/login" component={LoginPage}></Route>
         <Route path="/register" component={RegisterPage}></Route>
         <Route path="/home" component={HomePage}></Route>
