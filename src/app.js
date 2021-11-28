@@ -18,8 +18,7 @@ class Application extends Component{
         <Route path="/contactus" component={ContactUsPage}></Route>
         <Route path="/login" component={LoginPage}></Route>
         <Route path="/register" component={RegisterPage}></Route>
-        <Route path="/home" component={HomePage}></Route>
-        
+        <Route path="/home" component={HomePage}></Route>        
       </Switch>
       </BrowserRouter>
 
