@@ -6,7 +6,7 @@ class RegisterPage extends Component{
     return(
       <div>
         <h1 className="heading">This is a registration page</h1>
-        <NavLink to="/home">Clik here to got to home page</NavLink>
+        <NavLink to="/home">Clik here to go to home page</NavLink>
       </div>
     )
   }

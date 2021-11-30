@@ -7,7 +7,7 @@ class LoginPage extends Component{
     return(
       <div className="login-page">
         <h1 className="heading">This is a login page</h1>
-        <NavLink to="/home">Clik here to got to home page</NavLink>
+        <NavLink to="/home">Clik here to go to home page</NavLink>
         <div className="login-form">
           <form className="login_page">
             <input type="text" className="textBox" placeholder="Username" /><br></br>

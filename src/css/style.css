@@ -1,0 +1,50 @@
+.heading{
+    color: brown;
+    font-size: 24px;
+  }
+  
+  .sub-heading{
+    color: blue;
+    font-size: 18px;
+  }
+  
+  .header{
+    border: 2px solid red;
+    height: 10vh;
+  }
+  
+  .body-area{
+    border: 2px solid;
+    height: 86vh;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .sidebar{
+    border: 2px solid red;
+    width: 20vw;
+  }
+  
+  .content{
+    border: 2px solid blue;
+    width: 80vw;
+  }
+  
+  .custom-button{
+    font-size: 22px;
+    text-decoration: none;
+    border: 2px solid;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #b292eb;
+    color: white;
+  }
+  
+  .btn-margin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .active{
+    background-color: black;
+  }
