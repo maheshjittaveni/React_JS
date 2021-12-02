@@ -1,22 +1,53 @@
 import React, {Component} from "react";
-import { NavLink } from "react-router-dom";
-
+import {NavLink} from "react-router-dom";
 
 class LoginPage extends Component{
+
+  constructor(props){
+    super(props);
+    this.state = {
+      email_id : "",
+      password : ""
+    }
+  }
+
+  onChangeEmail = (event) => {
+    // console.log(event.target.value)
+    this.setState({
+      email_id : event.target.value
+    })
+  }
+
+  onChangePassword = (event) => {
+    // console.log(event.target.value)
+    this.setState({
+      password : event.target.value
+    })
+  }
+
+  onSubmitLogin(){
+    console.log(this.state)
+  }
+
   render(){
     return(
-      <div className="login-page">
-        <h1 className="heading">This is a login page</h1>
-        <NavLink to="/home">Clik here to go to home page</NavLink>
-        <div className="login-form">
-          <form className="login_page">
-            <input type="text" className="textBox" placeholder="Username" /><br></br>
-            <input type="password" className="textPass" placeholder="Password" /><br></br>
-            <input type="submit" className="btnSubmit" value="Log in"/>
-          </form>
+      <div>
+        <h1>This is a Login Page</h1>
+        <NavLink to="/home">Click here, to go Home Page</NavLink>
+        <div className="m-top-10">
+          <label>Please enter your Email ID :</label>
+          <input type="text" placeholder="Enter your email id..." 
+          onChange={this.onChangeEmail}/>
+        </div>
+        <div className="m-top-10">
+          <label>Please enter your Password :</label>
+          <input type="password" placeholder="Enter your password..." 
+          onChange={this.onChangePassword} />
+        </div>
+        <div className="m-top-10">
+          <button onClick={() => this.onSubmitLogin()}>Login</button>
         </div>
       </div>
-      
     )
   }
 }
