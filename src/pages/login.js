@@ -7,7 +7,8 @@ class LoginPage extends Component{
     super(props);
     this.state = {
       email_id : "",
-      password : ""
+      password : "",
+      isPasswordVisible : false
     }
   }
 
@@ -29,6 +30,12 @@ class LoginPage extends Component{
     console.log(this.state)
   }
 
+  isPasswordVisible(){
+    this.setState({
+      isPasswordVisible : !this.state.isPasswordVisible
+    })
+  }
+
   render(){
     return(
       <div>
@@ -41,8 +48,15 @@ class LoginPage extends Component{
         </div>
         <div className="m-top-10">
           <label>Please enter your Password :</label>
-          <input type="password" placeholder="Enter your password..." 
+          <input type={this.state.isPasswordVisible ? "text" : "password"} placeholder="Enter your password..." 
           onChange={this.onChangePassword} />
+          {
+            this.state.isPasswordVisible ? 
+            <img src={require("../images/eye-open.jpg").default} className="eye-image" onClick={() => this.isPasswordVisible()}/>
+            :
+            <img src={require("../images/eye-close.png").default} className="eye-image" onClick={() => this.isPasswordVisible()}/>
+          }
+          
         </div>
         <div className="m-top-10">
           <button onClick={() => this.onSubmitLogin()}>Login</button>

@@ -17,9 +17,9 @@ class Application extends Component{
       <Switch>
         <Route path="/" exact component={LandingPage}></Route>
         <Route path="/aboutus" component={AboutUsPage}></Route>
-        <Route path="/contactus" component={ContactUsPage}></Route>
+        <Route path="/contact" component={ContactUsPage}></Route>
         <Route path="/login" component={LoginPage}></Route>
-        <Route path="/register" component={RegisterPage}></Route>
+        <Route path="/signup" component={RegisterPage}></Route>
         <Route path="/home" component={HomePage}></Route> 
         <Route path="/mail" component={MailPage}></Route>       
       </Switch>
