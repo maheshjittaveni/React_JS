@@ -8,7 +8,9 @@ class LoginPage extends Component{
     this.state = {
       email_id : "",
       password : "",
-      isPasswordVisible : false
+      isPasswordVisible : false,
+      email_id_invalid:false,
+      password_invalid:false
     }
   }
 
@@ -27,7 +29,27 @@ class LoginPage extends Component{
   }
 
   onSubmitLogin(){
-    console.log(this.state)
+    // console.log(this.state)
+    if(this.state.email_id === ""){
+      this.setState({
+        email_id_invalid : true
+      })
+    }else{
+      this.setState({
+        email_id_invalid : false
+      })
+    }
+
+    if(this.state.password === ""){
+      this.setState({
+        password_invalid : true
+      })
+    }
+    else{
+      this.setState({
+        password_invalid : false
+      })
+    }
   }
 
   isPasswordVisible(){
@@ -45,6 +67,7 @@ class LoginPage extends Component{
           <label>Please enter your Email ID :</label>
           <input type="text" placeholder="Enter your email id..." 
           onChange={this.onChangeEmail}/>
+          { this.state.email_id_invalid && <span className="error-message">Please enter a valid email id</span>}
         </div>
         <div className="m-top-10">
           <label>Please enter your Password :</label>
@@ -56,6 +79,8 @@ class LoginPage extends Component{
             :
             <img src={require("../images/eye-close.png").default} className="eye-image" onClick={() => this.isPasswordVisible()}/>
           }
+
+          {this.state.password_invalid && <span className="error-message">Please enter a valid password</span>}
           
         </div>
         <div className="m-top-10">
@@ -65,5 +90,6 @@ class LoginPage extends Component{
     )
   }
 }
+
 
 export default LoginPage;
